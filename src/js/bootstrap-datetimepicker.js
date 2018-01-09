@@ -2620,7 +2620,10 @@
             t: function () {
                 this.date(this.getMoment());
             },
-            'delete': function () {
+            'delete': function (widget) {
+                if (!widget) {
+                    return;
+                }
                 this.clear();
             }
         },
